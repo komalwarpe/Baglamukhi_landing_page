@@ -2297,7 +2297,7 @@ h1 span {
 
         grid-template-columns: 1fr 1fr;
 
-        grid-template-rows: 220px 180px 180px;
+        /* grid-template-rows: 220px 180px 180px; */
 
     }
 
