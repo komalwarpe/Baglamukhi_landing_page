@@ -1,0 +1,2320 @@
+/* =========================================
+   ROOT
+========================================= */
+
+:root {
+
+    --maroon: #64121c;
+    --dark-maroon: #3b0910;
+
+    --saffron: #e87817;
+    --gold: #d8a43a;
+    --light-gold: #f4d98b;
+
+    --cream: #fff8ec;
+    --white: #ffffff;
+
+    --text: #2c1b18;
+    --muted: #766762;
+
+    --border: #ead9bd;
+
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: "DM Sans", sans-serif;
+
+    color: var(--text);
+
+    background: var(--cream);
+
+    line-height: 1.6;
+
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================
+   COMMON
+========================================= */
+
+.container {
+
+    width: min(1180px, 90%);
+
+    margin: auto;
+
+}
+
+.section {
+
+    padding: 100px 0;
+
+}
+
+.section-label {
+
+    color: var(--saffron);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+
+}
+
+.section-label.light {
+    color: var(--light-gold);
+}
+
+h1,
+h2,
+h3 {
+
+    font-family: "Playfair Display", serif;
+
+}
+
+h2 {
+
+    font-size: clamp(38px, 5vw, 58px);
+
+    line-height: 1.1;
+
+}
+
+h2 span,
+h1 span {
+
+    color: var(--saffron);
+
+    display: block;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(59, 9, 16, 0.96);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255,255,255,.1);
+
+}
+
+.nav {
+
+    min-height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: white;
+
+}
+
+.logo-symbol {
+
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    color: var(--gold);
+
+    font-size: 25px;
+
+}
+
+.logo strong {
+
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 18px;
+
+}
+
+.logo small {
+
+    display: block;
+
+    color: var(--light-gold);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+.nav-links {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+.nav-links a {
+
+    color: #fff;
+
+    font-size: 14px;
+
+    transition: .3s;
+
+}
+
+.nav-links a:hover {
+
+    color: var(--light-gold);
+
+}
+
+.nav-btn {
+
+    background: var(--saffron);
+
+    color: white;
+
+    padding: 11px 20px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+.menu-btn {
+
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 23px;
+
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.mobile-menu {
+
+    display: none;
+
+    position: fixed;
+
+    top: 78px;
+
+    left: 0;
+
+    width: 100%;
+
+    background: var(--dark-maroon);
+
+    z-index: 999;
+
+    padding: 20px;
+
+}
+
+.mobile-menu.active {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.mobile-menu a {
+
+    color: white;
+
+    padding: 13px;
+
+    border-bottom: 1px solid rgba(255,255,255,.1);
+
+}
+
+/* =========================================
+   PUJA HERO SECTION
+========================================= */
+
+.puja-section {
+
+    width: 100%;
+
+    padding: 110px 0 80px;
+
+    background: #fffaf2;
+
+}
+
+
+.puja-container {
+
+    width: min(1200px, 90%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 55px;
+
+    align-items: center;
+
+}
+
+
+/* =========================================
+   LEFT IMAGE
+========================================= */
+
+.puja-slider {
+
+    width: 100%;
+
+}
+
+
+.puja-image-wrapper {
+
+    width: 100%;
+
+    height: 570px;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    background: #f2e3c9;
+
+    box-shadow:
+        0 15px 40px rgba(59, 9, 16, 0.12);
+
+}
+
+
+.puja-image-wrapper img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+}
+
+
+/* =========================================
+   SLIDER DOTS
+========================================= */
+
+.slider-dots {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 18px;
+
+}
+
+
+.slider-dots .dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #d2d2d2;
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+
+}
+
+
+.slider-dots .dot.active {
+
+    width: 9px;
+
+    height: 9px;
+
+    background: var(--saffron);
+
+}
+
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.puja-content {
+
+    width: 100%;
+
+}
+
+
+.puja-content h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(20px, 3.2vw, 40px);
+
+    line-height: 1.15;
+
+    color: var(--maroon);
+
+    margin-bottom: 20px;
+
+}
+
+
+/* Orange highlight */
+
+.puja-content h3::first-line {
+
+    color: var(--saffron);
+
+}
+
+
+.puja-description {
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #292929;
+
+    margin-bottom: 24px;
+
+}
+
+
+.puja-subtitle {
+
+    font-size: 15px;
+
+    color: #756761;
+
+    margin-bottom: 22px;
+
+    font-weight: 500;
+
+}
+
+
+/* =========================================
+   INFO
+========================================= */
+
+.puja-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 17px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.info-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+.info-icon {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--saffron);
+
+    font-size: 18px;
+
+}
+
+
+.info-item span {
+
+    display: block;
+
+    font-size: 13px;
+
+    color: #81746e;
+
+    margin-bottom: 2px;
+
+}
+
+
+.info-item strong {
+
+    display: block;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    color: #252525;
+
+}
+
+
+/* =========================================
+   DEVOTEE TEXT
+========================================= */
+
+.devotee-text {
+
+    color: #756761;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+
+}
+
+
+.devotee-text strong {
+
+    color: var(--maroon);
+
+}
+
+
+/* =========================================
+   PUJA BUTTON
+========================================= */
+
+.puja-button {
+
+    width: 100%;
+
+    min-height: 52px;
+
+    padding: 14px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    background: var(--saffron);
+
+    color: white;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition: all .3s ease;
+
+}
+
+
+.puja-button i {
+
+    font-size: 14px;
+
+    transition: transform .3s ease;
+
+}
+
+
+.puja-button:hover {
+
+    background: var(--maroon);
+
+    transform: translateY(-2px);
+
+}
+
+
+.puja-button:hover i {
+
+    transform: translateX(4px);
+
+}
+
+/* =====================================================
+   GALLERY SECTION
+===================================================== */
+
+.gallery-section {
+    width: 100%;
+    padding: 70px 20px;
+    box-sizing: border-box;
+    background: #fffaf5;
+}
+
+.gallery-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   GALLERY HEADING
+===================================================== */
+
+.gallery-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.gallery-heading span {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.gallery-heading h2 {
+    margin: 0 0 10px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.gallery-heading p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   GALLERY GRID
+===================================================== */
+
+.gallery-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+/* =====================================================
+   GALLERY ITEM
+===================================================== */
+
+.gallery-item {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #eee;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+
+/* =====================================================
+   DESKTOP HOVER
+===================================================== */
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .gallery-section {
+        padding: 60px 20px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .gallery-heading h2 {
+        font-size: 28px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .gallery-section {
+        padding: 45px 12px;
+    }
+
+    .gallery-heading {
+        margin-bottom: 25px;
+    }
+
+    .gallery-heading span {
+        font-size: 13px;
+    }
+
+    .gallery-heading h2 {
+        font-size: 23px;
+        line-height: 1.3;
+    }
+
+    .gallery-heading p {
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 0 8px;
+    }
+
+    /* 2 images per row on mobile */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .gallery-item {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 10px;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .gallery-section {
+        padding: 40px 10px;
+    }
+
+    .gallery-grid {
+        gap: 10px;
+    }
+
+    .gallery-item {
+        border-radius: 8px;
+    }
+
+    .gallery-heading h2 {
+        font-size: 21px;
+    }
+
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .puja-section {
+
+        padding: 50px 0 70px;
+
+    }
+
+
+    .puja-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+    }
+
+
+    .puja-image-wrapper {
+
+        height: 500px;
+
+    }
+
+
+    .puja-content {
+
+        max-width: 750px;
+
+        margin: auto;
+
+    }
+
+
+    .puja-content h1 {
+
+        font-size: 40px;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .puja-section {
+
+        padding: 35px 0 55px;
+
+    }
+
+
+    .puja-container {
+
+        width: 92%;
+
+        gap: 30px;
+
+    }
+
+
+    .puja-image-wrapper {
+
+        height: 330px;
+
+        border-radius: 6px;
+        margin-top: 80px;
+
+    }
+
+    .puja-content h1 {
+
+        font-size: 32px;
+
+        line-height: 1.2;
+
+        margin-bottom: 16px;
+
+    }
+
+
+    .puja-description {
+
+        font-size: 15px;
+
+        line-height: 1.65;
+
+    }
+
+
+    .puja-subtitle {
+
+        font-size: 14px;
+
+    }
+
+
+    .info-item {
+
+        gap: 10px;
+
+    }
+
+
+    .info-icon {
+
+        width: 30px;
+
+    }
+
+
+    .info-item strong {
+
+        font-size: 14px;
+
+    }
+
+
+    .devotee-text {
+
+        font-size: 14px;
+
+    }
+
+
+    .puja-button {
+
+        min-height: 50px;
+
+        font-size: 15px;
+
+    }
+
+}
+
+/* =====================================================
+   PUJA DETAILS SECTION
+===================================================== */
+
+.puja-details-section {
+
+    width: 100%;
+
+    background: #ffffff;
+
+    padding: 55px 0 90px;
+
+}
+
+
+.puja-details-container {
+
+    width: min(1000px, 90%);
+
+    margin: 0 auto;
+
+}
+
+
+/* =====================================================
+   TABS
+===================================================== */
+
+.puja-tabs {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    margin-bottom: 32px;
+
+}
+
+
+.puja-tab {
+
+    border: 1px solid #ffd2ae;
+
+    background: #ffffff;
+
+    color: #171717;
+
+    padding: 11px 22px;
+
+    border-radius: 30px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.puja-tab:hover {
+
+    border-color: #ff9638;
+
+    color: #ed7818;
+
+}
+
+
+.puja-tab.active {
+
+    background: #ff9638;
+
+    color: #ffffff;
+
+    border-color: #ff9638;
+
+    box-shadow: 0 5px 15px rgba(255, 150, 56, 0.20);
+
+}
+
+
+/* =====================================================
+   TAB PANELS
+===================================================== */
+
+.puja-panel {
+
+    display: none;
+
+    animation: pujaFadeIn 0.35s ease;
+
+}
+
+
+.puja-panel.active {
+
+    display: block;
+
+}
+
+
+@keyframes pujaFadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =====================================================
+   ABOUT PUJA
+===================================================== */
+
+.about-puja-content {
+
+    width: 100%;
+
+}
+
+
+.about-puja-content > p {
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.65;
+
+    color: #171717;
+
+    margin-bottom: 5px;
+
+}
+
+
+.about-puja-content h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+
+    line-height: 1.3;
+
+    color: #171717;
+
+    margin-top: 25px;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* =====================================================
+   ABOUT IMAGE
+===================================================== */
+
+.about-puja-image {
+
+    width: 675px;
+
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+}
+
+
+.about-puja-image img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+/* =====================================================
+   PACKAGE HEADING
+===================================================== */
+
+.package-heading {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.package-heading > span {
+
+    display: inline-block;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #ed7818;
+
+    margin-bottom: 8px;
+
+}
+
+
+.package-heading h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 38px;
+
+    color: #64121c;
+
+    margin-bottom: 8px;
+
+}
+
+
+.package-heading p {
+
+    color: #756761;
+
+    font-size: 15px;
+
+}
+
+
+/* =====================================================
+   PACKAGE GRID
+===================================================== */
+
+.package-grid {
+
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+
+    /* grid-template-columns: repeat(3, 1fr); */
+
+    gap: 22px;
+
+}
+
+
+/* =====================================================
+   PACKAGE CARD
+===================================================== */
+
+.package-card {
+
+    position: relative;
+
+    background: #fffaf3;
+
+    border: 1px solid #ecdcc8;
+
+    border-radius: 16px;
+
+    padding: 28px 24px;
+
+    overflow: hidden;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.package-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #f1a15b;
+
+    box-shadow:
+        0 15px 35px rgba(71, 30, 10, 0.10);
+
+}
+
+
+.package-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+.package-top .package-img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.package-card h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    color: #64121c;
+
+    margin-bottom: 10px;
+
+}
+
+
+.package-card p {
+
+    color: #756761;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    min-height: 68px;
+
+}
+
+
+
+.package-button {
+
+    margin-top: 10px;
+
+    padding: 10px 10px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #64121c;
+
+    color: #ffffff;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+
+}
+
+
+
+
+/* =====================================================
+   BENEFITS
+===================================================== */
+
+.simple-tab-content {
+
+    padding-top: 10px;
+
+}
+
+
+.simple-tab-content > span {
+
+    color: #ed7818;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.simple-tab-content h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 38px;
+
+    color: #64121c;
+
+    margin: 8px 0 30px;
+
+}
+
+
+/* ================= BENEFITS GRID ================= */
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .benefit-item {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+
+
+.benefit-item {
+
+    padding: 25px;
+
+    background: #fffaf3;
+
+    border: 1px solid #ead9bd;
+
+    border-radius: 15px;
+
+}
+
+
+.benefit-item i {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #fff0df;
+
+    color: #ed7818;
+
+    border-radius: 50%;
+
+    margin-bottom: 15px;
+
+}
+
+
+.benefit-item h3 {
+
+    font-family: "Playfair Display", serif;
+
+    color: #64121c;
+
+    margin-bottom: 8px;
+
+}
+
+
+.benefit-item p {
+
+    color: #756761;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   STEPS
+===================================================== */
+
+.steps-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+.step-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    background: #fffaf3;
+
+    border: 1px solid #ead9bd;
+
+    border-radius: 14px;
+
+}
+
+
+.step-number {
+
+    min-width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #64121c;
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    font-size: 13px;
+
+}
+
+
+.step-item h3 {
+
+    font-family: "Playfair Display", serif;
+
+    color: #64121c;
+
+    margin-bottom: 3px;
+
+}
+
+
+.step-item p {
+
+    color: #756761;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+.faq-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.faq-list details {
+
+    border: 1px solid #ead9bd;
+
+    border-radius: 12px;
+
+    background: #fffaf3;
+
+    overflow: hidden;
+
+}
+
+
+.faq-list summary {
+
+    list-style: none;
+
+    cursor: pointer;
+
+    padding: 18px 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: #64121c;
+
+    font-weight: 600;
+
+}
+
+
+.faq-list summary::-webkit-details-marker {
+
+    display: none;
+
+}
+
+
+.faq-list summary i {
+
+    color: #ed7818;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.faq-list details[open] summary i {
+
+    transform: rotate(45deg);
+
+}
+
+
+.faq-list details p {
+
+    padding: 0 20px 20px;
+
+    color: #756761;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .puja-details-section {
+
+        padding: 45px 0 70px;
+
+    }
+
+
+    .puja-tabs {
+
+        gap: 12px;
+
+    }
+
+
+    .puja-tab {
+
+        padding: 10px 18px;
+
+        font-size: 14px;
+
+    }
+
+
+    .package-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .puja-details-section {
+
+        padding: 35px 0 55px;
+
+    }
+
+
+    .puja-details-container {
+
+        width: 92%;
+
+    }
+
+
+    /* Tabs become horizontally scrollable */
+
+    .puja-tabs {
+
+        /* justify-content: flex-start; */
+
+        flex-wrap: wrap;
+
+        overflow-x: auto;
+
+        padding-bottom: 8px;
+
+        gap: 8px;
+
+        scrollbar-width: none;
+
+    }
+
+
+    .puja-tabs::-webkit-scrollbar {
+
+        display: none;
+
+    }
+
+
+    .puja-tab {
+
+        flex-shrink: 0;
+
+        padding: 9px 16px;
+
+        font-size: 13px;
+
+    }
+
+
+    /* About */
+
+    .about-puja-content > p {
+
+        font-size: 15px;
+
+        line-height: 1.65;
+
+    }
+
+
+    .about-puja-content h2 {
+
+        font-size: 22px;
+
+    }
+
+
+    .about-puja-image {
+
+        width: 100%;
+
+    }
+
+
+    /* Package */
+
+    .package-heading h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .package-heading p {
+
+        font-size: 14px;
+
+    }
+
+
+    .package-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+
+    }
+
+
+    .package-card {
+
+        padding: 25px 20px;
+
+    }
+
+
+    /* Benefits */
+
+    .simple-tab-content h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    /* Steps */
+
+    .step-item {
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+    .step-number {
+
+        min-width: 42px;
+
+        height: 42px;
+
+        font-size: 11px;
+
+    }
+
+
+    .step-item h3 {
+
+        font-size: 18px;
+
+    }
+
+
+    /* FAQ */
+
+    .faq-list summary {
+
+        padding: 16px;
+
+        font-size: 14px;
+
+    }
+
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    background: var(--dark-maroon);
+    color: white;
+    padding: 70px 0 0;
+}
+
+
+/* =====================================================
+   FOOTER MAIN
+===================================================== */
+
+.footer-grid {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 60px;
+    padding-bottom: 50px;
+}
+
+
+/* =====================================================
+   FOOTER BRAND
+===================================================== */
+
+.footer-brand {
+    flex: 1;
+    max-width: 600px;
+}
+
+.footer-logo {
+    color: var(--gold);
+    font-size: 40px;
+    line-height: 1;
+}
+
+.footer-brand h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+
+/* =====================================================
+   FOOTER LINKS
+===================================================== */
+
+.footer-links {
+    width: 220px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.footer-links h4 {
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.footer-links a {
+    color: #d9c4c4;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--light-gold);
+    transform: translateX(3px);
+}
+
+
+/* =====================================================
+   PRIVACY LINKS
+===================================================== */
+
+.privacy {
+    border-top: 1px solid rgba(255,255,255,.1);
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+
+    font-size: 14px;
+}
+
+.privacy div {
+    list-style: none;
+}
+
+.privacy li,
+.privacy ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.privacy a {
+    color: #d9c4c4;
+    transition: color 0.3s ease;
+}
+
+.privacy a:hover {
+    color: var(--light-gold);
+}
+
+
+/* =====================================================
+   COPYRIGHT
+===================================================== */
+
+.copyright {
+    padding-bottom: 20px;
+
+    text-align: center;
+
+    color: #bdaaaa;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .footer {
+        padding-top: 55px;
+    }
+
+    .footer-grid {
+        width: 90%;
+
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        gap: 40px;
+    }
+
+    .footer-brand {
+        max-width: 500px;
+    }
+
+    .footer-links {
+        width: 180px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .footer {
+        padding-top: 45px;
+    }
+
+    .footer-grid {
+        width: 92%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 30px;
+
+        padding-bottom: 35px;
+    }
+
+
+    /* Brand */
+
+    .footer-brand {
+        width: 100%;
+        max-width: none;
+    }
+
+    .footer-logo {
+        font-size: 36px;
+    }
+
+    .footer-brand h3 {
+        font-size: 22px;
+    }
+
+
+    /* Links */
+
+    .footer-links {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .footer-links h4 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+    }
+
+
+    /* Privacy */
+
+    .privacy {
+        padding: 18px 12px;
+
+        flex-wrap: wrap;
+
+        gap: 12px 25px;
+
+        font-size: 13px;
+
+        text-align: center;
+    }
+
+
+    /* Copyright */
+
+    .copyright {
+        padding: 0 15px 18px;
+
+        font-size: 11px;
+
+        line-height: 1.5;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .footer-grid {
+        width: 90%;
+        gap: 25px;
+    }
+
+    .footer-logo {
+        font-size: 32px;
+    }
+
+    .footer-brand h3 {
+        font-size: 20px;
+    }
+
+    .privacy {
+        gap: 10px 18px;
+        font-size: 12px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+
+.whatsapp-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+    background: #25D366;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+    text-decoration: none;
+
+    z-index: 10;
+
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.08);
+    background: #20bd5a;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .nav-links,
+    .nav-btn {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero-content {
+
+        grid-template-columns: 1fr;
+
+        padding-top: 120px;
+
+    }
+
+    .hero-card {
+        max-width: 450px;
+    }
+
+    .quick-grid,
+    .seva-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .about-grid,
+    .schedule-grid,
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+    .seva-card.featured {
+
+        transform: none;
+
+    }
+
+    .festival-content {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+}
+
+
+@media (max-width: 600px) {
+
+    .section {
+
+        padding: 70px 0;
+
+    }
+
+    .hero {
+
+        min-height: 850px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 45px;
+
+    }
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+    .quick-section {
+
+        margin-top: -30px;
+
+    }
+
+    .image-box img {
+
+        height: 400px;
+
+    }
+
+    .image-badge {
+
+        right: 15px;
+
+        bottom: -20px;
+
+    }
+
+    .gallery-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-rows: 220px 180px 180px;
+
+    }
+
+    .gallery-item.large {
+
+        grid-column: span 2;
+
+        grid-row: span 1;
+
+    }
+
+    .timing-row {
+
+        flex-direction: column;
+
+        gap: 3px;
+
+    }
+
+}
