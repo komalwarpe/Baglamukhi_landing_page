@@ -381,59 +381,30 @@ h1 span {
 
     display: block;
 
-}
-
-
-/* =========================================
-   SLIDER DOTS
-========================================= */
-
-.slider-dots {
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 12px;
-
-    margin-top: 18px;
+    /* Zoom effect */
+    animation: pujaZoom 8s ease-in-out infinite alternate;
 
 }
 
 
-.slider-dots .dot {
+/* ================================
+   SLOW ZOOM IN / ZOOM OUT
+================================ */
 
-    width: 8px;
+@keyframes pujaZoom {
 
-    height: 8px;
+    0% {
+        transform: scale(1);
+    }
 
-    padding: 0;
-
-    border: none;
-
-    border-radius: 50%;
-
-    background: #d2d2d2;
-
-    cursor: pointer;
-
-    transition: all .3s ease;
+    100% {
+        transform: scale(1.08);
+    }
 
 }
 
 
-.slider-dots .dot.active {
-
-    width: 9px;
-
-    height: 9px;
-
-    background: var(--saffron);
-
-}
-
+/
 
 /* =========================================
    RIGHT CONTENT
