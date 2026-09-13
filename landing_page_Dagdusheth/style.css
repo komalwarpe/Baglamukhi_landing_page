@@ -1247,12 +1247,7 @@ h1 span {
 .package-grid {
 
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-
-    /* grid-template-columns: repeat(3, 1fr); */
-
-    gap: 22px;
+  gap: 22px;
 
 }
 
@@ -1726,9 +1721,6 @@ h1 span {
     /* Tabs become horizontally scrollable */
 
     .puja-tabs {
-
-        /* justify-content: flex-start; */
-
         flex-wrap: wrap;
 
         overflow-x: auto;
@@ -1870,10 +1862,6 @@ h1 span {
 /* =========================================
    FOOTER
 ========================================= */
-
-/* =====================================================
-   FOOTER
-===================================================== */
 
 .footer {
     background: var(--dark-maroon);
